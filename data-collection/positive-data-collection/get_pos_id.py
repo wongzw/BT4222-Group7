@@ -47,7 +47,7 @@ def func(lst):
         return []
 
 if __name__ == "__main__":
-    df = pd.read_csv("../raw-data/charts.csv")
+    df = pd.read_csv("../../raw-data/charts.csv")
     df["year"] = df["date"].apply(lambda x: x.split("/")[-1])
     df = df[(df["year"] < "21") & (df["year"] >= "00")]
     df = df.drop_duplicates(['song', 'artist'])
